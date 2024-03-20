@@ -57,7 +57,7 @@ class _ContactsState extends State<Contacts> {
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          text: "Contactez Moi",
+          text: "Contact Me",
           style: AppTextStyles.normalStyle(
               fontSize: 30.0,
               color: AppColors.blackColor,

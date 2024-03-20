@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
         children: [
           Image.asset(
             AppAssets.profile1,
-            width: 350,
-            height: 350,
+            width: 200,
+            height: 200,
             fit: BoxFit.fill,
           ),
           Constants.sizedBox(height: 25.0),
@@ -35,8 +35,8 @@ class _HomePageState extends State<HomePage> {
         children: [
           Image.asset(
             AppAssets.profile1,
-            width: 350,
-            height: 350,
+            width: 200,
+            height: 200,
             fit: BoxFit.fill,
           ),
           Constants.sizedBox(height: 25.0),
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
         ),
         Constants.sizedBox(height: 15.0),
         Text(
-          "Mobile Developper I Android IOS I Flutter & Dart ",
+          "Mobile & Web Developper I Android IOS Web I Flutter & Dart ",
           style: AppTextStyles.normalStyle(
             color: AppColors.blackColor,
             fontSize: 22,
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   _launchUrl("mailto:contactryaddev@gmail.com");
                 },
-                buttonName: 'Contactez moi')
+                buttonName: 'Contact Me')
           ],
         ),
         Constants.sizedBox(height: 22.0),

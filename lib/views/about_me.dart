@@ -65,7 +65,7 @@ class AboutMe extends StatelessWidget {
         textAlign: TextAlign.center,
         text: TextSpan(
           text:
-              "A Propos de moi",
+              "About Me",
           style: AppTextStyles.normalStyle(
               fontSize: 30.0,
               color: AppColors.blackColor,
@@ -79,8 +79,8 @@ class AboutMe extends StatelessWidget {
       duration: const Duration(milliseconds: 1200),
       child: Image.asset(
         AppAssets.profile2,
-        height: 400,
-        width: 400,
+        height: 300,
+        width: 300,
       ),
     );
   }
@@ -95,14 +95,14 @@ class AboutMe extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AboutMeContainer(CupertinoIcons.checkmark_seal_fill,"Expérience","2 ans de'experience"),
-            AboutMeContainer(CupertinoIcons.person_2_fill,"Education","Licence en Génie Logiciel"),
+            AboutMeContainer(CupertinoIcons.person_2_fill,"Education","Génie Logiciel"),
           ],
         ),
         Constants.sizedBox(height: 20.0),
         FadeInLeft(
           duration: const Duration(milliseconds: 1600),
           child: Text(
-            "Développeur mobile passionné avec 2 ans d'expérience et une formation en génie logiciel, je maîtrise Flutter Dart Firebase pour créer des applications natives fluides. Habitué à VsCode et Xcode, je m'adapte vite. Plus qu'un développeur, je suis un solutionneur. Je traduis vos idées en applications mobiles sur mesure, performantes et stables grâce à mon sens du détail. Ensemble, propulsons votre entreprise vers le succès mobile !",
+            "Développeur mobile passionné avec 2 ans d'expérience et une formation en génie logiciel, je maîtrise Flutter ,Dart ,Firebase ,MySql pour créer des applications mobile et sites web natives fluides. Habitué à VsCode et Xcode, je m'adapte vite. Plus qu'un développeur, je suis un solutionneur. Je traduis vos idées en applications mobiles sur mesure, performantes et stables grâce à mon sens du détail. Ensemble, propulsons votre entreprise vers le succès mobile !",
             style: AppTextStyles.normalStyle(color: AppColors.blackColor),
           ),
         ),
@@ -125,13 +125,7 @@ class AboutMe extends StatelessWidget {
         FadeInLeft(
           duration: const Duration(milliseconds: 1600),
           child: Text(
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
-            ' The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,'
-            ' as opposed to using \'Content here, content here\', making it look like readable English.'
-            ' Many desktop publishing packages and web page editors now use Lorem Ipsum as their default'
-            ' model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy.'
-            ' Various versions have evolved over the years, sometimes by accident, sometimes on purpose'
-            ' (injected humour and the like).',
+            "Développeur mobile passionné avec 2 ans d'expérience et une formation en génie logiciel, je maîtrise Flutter ,Dart ,Firebase ,MySql pour créer des applications mobile et sites web natives fluides. Habitué à VsCode et Xcode, je m'adapte vite. Plus qu'un développeur, je suis un solutionneur. Je traduis vos idées en applications mobiles sur mesure, performantes et stables grâce à mon sens du détail. Ensemble, propulsons votre entreprise vers le succès mobile !",
             style: AppTextStyles.normalStyle(color: AppColors.blackColor),
           ),
         ),
