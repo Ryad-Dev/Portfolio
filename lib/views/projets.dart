@@ -4,14 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/responsive.dart';
 
-class Services extends StatefulWidget {
-  const Services({Key? key}) : super(key: key);
+class Projets extends StatefulWidget {
+  const Projets({Key? key}) : super(key: key);
 
   @override
-  State<Services> createState() => _ServicesState();
+  State<Projets> createState() => _ProjetsState();
 }
 
-class _ServicesState extends State<Services> {
+class _ProjetsState extends State<Projets> {
   bool isApp = false, isGraphic = false, isDataAnalyst = false;
 
   final onHoverActive = Matrix4.identity()..translate(0, -10, 0);

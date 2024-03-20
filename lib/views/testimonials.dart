@@ -73,46 +73,42 @@ class _TestimonialsState extends State<Testimonials> {
           )
         ],
       ),
-      tablet: Column(
-        mainAxisSize: MainAxisSize.min,
+      tablet:  Column(
+        // mainAxisSize: MainAxisSize.min,
         children: [
+          
           buildMyServicesText(),
           Constants.sizedBox(height: 60.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  setState(() {
-                    isApp = value;
-                  });
-                },
-                child: buildAnimatedContainer(
-                  title: 'App Development',
-                  asset: AppAssets.code,
-                  hover: isApp,
-                   content: "Le contenu de l'avis",
-                ),
-              ),
-              Constants.sizedBox(width: 24.0),
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  setState(() {
-                    isGraphic = value;
-                  });
-                },
-                child: buildAnimatedContainer(
-                  title: 'Graphic Designing',
-                  asset: AppAssets.brush,
-                  hover: isGraphic,
-                   content: "Le contenu de l'avis",
-                ),
-              ),
-            ],
+          InkWell(
+            onTap: () {},
+            onHover: (value) {
+              setState(() {
+                isApp = value;
+              });
+            },
+            child: buildAnimatedContainer(
+              title: 'App Development',
+               content: "Le contenu de l'avis",
+              asset: AppAssets.code,
+              hover: isApp,
+            ),
           ),
-          Constants.sizedBox(height: 26.0),
+          Constants.sizedBox(height: 24.0),
+          InkWell(
+            onTap: () {},
+            onHover: (value) {
+              setState(() {
+                isGraphic = value;
+              });
+            },
+            child: buildAnimatedContainer(
+              title: 'Graphic Designing',
+               content: "Le contenu de l'avis",
+              asset: AppAssets.brush,
+              hover: isGraphic,
+            ),
+          ),
+          Constants.sizedBox(height: 24.0),
           InkWell(
             onTap: () {},
             onHover: (value) {
@@ -122,11 +118,9 @@ class _TestimonialsState extends State<Testimonials> {
             },
             child: buildAnimatedContainer(
               title: 'Digital Marketing',
+               content: "Le contenu de l'avis",
               asset: AppAssets.analyst,
               hover: isDataAnalyst,
-              width: 725.0,
-              hoverWidth: 735.0,
-               content: "Le contenu de l'avis",
             ),
           )
         ],
@@ -134,15 +128,6 @@ class _TestimonialsState extends State<Testimonials> {
       desktop: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-         /* Container(
-            //width: size.width,
-            height: 150,
-           
-            decoration: BoxDecoration(
-        color: AppColors.primaryColor.withOpacity(0.3),
-        borderRadius: BorderRadius.circular(20),
-      ),
-          ),*/
           buildMyServicesText(),
           Constants.sizedBox(height: 60.0),
           Row(
@@ -209,7 +194,7 @@ class _TestimonialsState extends State<Testimonials> {
         text: TextSpan(
           
           text:
-              "Ce que les utilisateurs disent",
+              "Témoignages",
           style: AppTextStyles.normalStyle(
               fontSize: 30.0,
               color: AppColors.blackColor,
@@ -224,34 +209,34 @@ class _TestimonialsState extends State<Testimonials> {
     required String content,
     required String asset,
     required bool hover,
-    double width = 300,
-    double hoverWidth = 310,
+    double width = 250,
+    double hoverWidth = 260,
   }) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       width: hover ? hoverWidth : width,
-      height: hover ? 390 : 380,
+      height: hover ? 300 : 290,
      // alignment: Alignment.center,
       transform: hover ? onHoverActive : onHoverRemove,
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 24),
       decoration: BoxDecoration(
-        color: AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(10),
-       
-        boxShadow: const [
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(15),
+       border: Border.all()
+      /*  boxShadow: const [
           BoxShadow(
             color: Colors.black54,
             spreadRadius: 4.0,
             blurRadius: 4.5,
             offset: Offset(3.0, 4.5),
           )
-        ],
+        ],*/
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CircleAvatar(
-            radius: 30,
+            radius: 25,
             child: Image.asset(
             asset,
             width: 35,
@@ -263,12 +248,12 @@ class _TestimonialsState extends State<Testimonials> {
           Text(
             title
             ,
-            style: AppTextStyles.normalStyle(fontSize: 15.0),
+            style: AppTextStyles.normalStyle(fontSize: 15.0,color: AppColors.blackColor,fontWeight: FontWeight.bold),
             //textAlign: TextAlign.start,
           ),
           Constants.sizedBox(height: 40.0),
           Text(content,
-            style: AppTextStyles.normalStyle(fontSize: 15.0),
+            style: AppTextStyles.normalStyle(fontSize: 15.0,color: AppColors.blackColor),
             //textAlign: TextAlign.start,
           ),
          

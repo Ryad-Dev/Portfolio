@@ -2,10 +2,10 @@
 import 'package:portfolio/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/views/about_me.dart';
-import 'package:portfolio/views/features.dart';
+import 'package:portfolio/views/contacts.dart';
 import 'package:portfolio/views/footer_class.dart';
 import 'package:portfolio/views/home_page.dart';
-import 'package:portfolio/views/services.dart';
+import 'package:portfolio/views/projets.dart';
 import 'package:portfolio/views/testimonials.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -17,8 +17,8 @@ final onMenuHover = Matrix4.identity()..scale(1.0);
 final menuItems = <String>[
   'Accueil',
   'A Propos',
-  'Projets',
-  'Avis',
+  //'Projets',
+  //'Avis',
   'Contacts',
 //'Portfolio',
 ];
@@ -27,9 +27,9 @@ const screensList = <Widget>[
   Header(),
   HomePage(),
   AboutMe(),
-  Services(),
-  Testimonials(),
-  Features(),
+  //Projets(),
+  //Testimonials(),
+  Contacts(),
  //FooterClass(),
 ];
 
@@ -110,8 +110,8 @@ class _HeaderState extends State<Header> {
               const SizedBox(
                 width: 40,
               ),
-        
-
+                  
+          
               const Text("Ryad Dev",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
               const Spacer(),
            
@@ -146,7 +146,7 @@ class _HeaderState extends State<Header> {
           );
         } else {
           return Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(30.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               // mainAxisAlignment: MainAxisAlignment.center,
@@ -154,7 +154,7 @@ class _HeaderState extends State<Header> {
                 const SizedBox(
                   width: 100,
                 ),
-                const Text("Ryad Dev",style: TextStyle(fontSize: 20,),),
+                const Text("Ryad Dev",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                 const Spacer(),
                 SizedBox(
                   height: 19,
@@ -203,17 +203,4 @@ class _HeaderState extends State<Header> {
     );
   }
 
-  /* AnimatedContainer buildNavBarAnimatedContainer(int index, bool hover) {
-    return AnimatedContainer(
-      alignment: Alignment.center,
-      width: hover ? 80 : 75,
-      duration: const Duration(milliseconds: 200),
-      transform: hover ? onMenuHover : null,
-      child: Text(
-        menuItems[index],
-        style: AppTextStyles.headerTextStyle(
-            color: hover ? AppColors.themeColor : AppColors.whiteColor),
-      ),
-    );
-  }*/
 }

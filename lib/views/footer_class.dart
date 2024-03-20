@@ -344,23 +344,5 @@ class _FooterClassState extends State<FooterClass> {
     }
   }
 
-  /*Ink buildSocialButton({required String asset}) {
-    return Ink(
-      width: 45,
-      height: 45,
-      decoration: BoxDecoration(
-        border: Border.all(width: 2.0),
-        color: AppColors.bgColor,
-        shape: BoxShape.circle,
-      ),
-      padding: const EdgeInsets.all(6),
-      child: Image.asset(
-        asset,
-        width: 10,
-        height: 12,
-        color: AppColors.bgColor,
-        // fit: BoxFit.fill,
-      ),
-    );
-  }*/
+
 }

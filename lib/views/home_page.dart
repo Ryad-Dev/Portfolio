@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       tablet: Column(
-       crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       desktop: SizedBox(
-         height: 500,
+        height: 600,
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -55,8 +55,8 @@ class _HomePageState extends State<HomePage> {
                   //color: Colors.blue,
                   height: 350,
                   fit: BoxFit.fill),
-                  Constants.sizedBox(width: 200.0),
-                    buildHomePersonalInfo(size)
+              Constants.sizedBox(width: 200.0),
+              buildHomePersonalInfo(size)
             ],
           ),
         ),
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
       bgColor: Colors.transparent,
     );
   }
-  
+
   Column buildHomePersonalInfo(Size size) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
         ),
         Constants.sizedBox(height: 15.0),
         Text(
-          "Mobile Developpeur.",
+          "Mobile Developper I Android IOS I Flutter & Dart ",
           style: AppTextStyles.normalStyle(
             color: AppColors.blackColor,
             fontSize: 22,
@@ -92,23 +92,44 @@ class _HomePageState extends State<HomePage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppButtons.buildMaterialButton(onTap: () {}, buttonName: 'Download CV'),
+            AppButtons.buildMaterialButton(
+                onTap: () {
+                  _launchUrl(
+                      "https://drive.google.com/file/d/1Gpqk0mn-cW70xILwqxovxZ9tADqgOvx0/view?usp=sharing");
+                },
+                buttonName: 'Download CV'),
             Constants.sizedBox(width: 25.0),
-            AppButtons.buildMaterialButton2(onTap: () {}, buttonName: 'Contactez moi')
+            AppButtons.buildMaterialButton2(
+                onTap: () {
+                  _launchUrl("mailto:contactryaddev@gmail.com");
+                },
+                buttonName: 'Contactez moi')
           ],
         ),
         Constants.sizedBox(height: 22.0),
-        Row(children: [
-          buildSocialButton(asset: AppAssets.github, radiusColor: AppColors.blackColor, Url:""),
-          Constants.sizedBox(width: 10.0),
-          buildSocialButton(asset: AppAssets.linkedIn, radiusColor: AppColors.primaryColor, Url:"https://www.linkedin.com/in/ryad-soule-chabi/"),
-          Constants.sizedBox(width: 10.0),
-          buildSocialButton(asset: AppAssets.insta, radiusColor: AppColors.primaryColor, Url:"https://www.instagram.com/ryad.sc/")
-        ],)
-        
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            buildSocialButton(
+                asset: AppAssets.github,
+                radiusColor: AppColors.blackColor,
+                Url: "https://github.com/Ryad-Dev"),
+            Constants.sizedBox(width: 10.0),
+            buildSocialButton(
+                asset: AppAssets.linkedIn,
+                radiusColor: AppColors.primaryColor,
+                Url: "https://www.linkedin.com/in/ryad-soule-chabi/"),
+            Constants.sizedBox(width: 10.0),
+            buildSocialButton(
+                asset: AppAssets.insta,
+                radiusColor: Colors.red,
+                Url: "https://www.instagram.com/ryad.sc/")
+          ],
+        )
       ],
     );
   }
+
   buildSocialButton(
       {required String asset,
       required Color radiusColor,
@@ -118,23 +139,21 @@ class _HomePageState extends State<HomePage> {
         _launchUrl(Url);
       },
       child: CircleAvatar(
-        radius: 20,
-        backgroundColor: radiusColor,
+        radius: 25,
+        backgroundColor: Color.fromARGB(255, 223, 223, 223),
         child: Image.asset(
           asset,
-          width: 20,
-          height: 20,
-          color: AppColors.whiteColor,
+          width: 25,
+          height: 25,
+          //color: AppColors.whiteColor,
           // fit: BoxFit.fill,
         ),
       ),
     );
   }
 
-  Future<void> _launchUrl(Url) async {
+  _launchUrl(Url) {
     final Uri url = Uri.parse(Url);
-    if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
-    }
+    launchUrl(url);
   }
 }

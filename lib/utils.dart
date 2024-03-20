@@ -102,14 +102,14 @@ class AppAssets {
   static String logoblanc = 'assets/images/portfolio_blanc.png';
   static String logobleu = 'assets/images/portfolio_bleu.png';
   static String facebook = 'assets/images/face.png';
-  static String linkedIn = 'assets/images/in.png';
+  static String linkedIn = 'assets/images/in.webp';
   static String invoice = 'assets/images/invoice.png';
-  static String insta = 'assets/images/insta.png';
+  static String insta = 'assets/images/insta.webp';
   static String twitter = 'assets/images/twit.png';
   static String user = 'assets/images/avatar.webp';
   static String github = 'assets/images/git.png';
   static String profile1 = 'assets/images/1.png';
-  static String profile2 = 'assets/images/home_image.png';
+  static String profile2 = 'assets/images/2.png';
   static String code = 'assets/images/coding.png';
   static String brush = 'assets/images/brush-stroke.png';
   static String analyst = 'assets/images/analytics.png';

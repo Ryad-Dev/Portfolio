@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     //final PageStorageBucket bucket = PageStorageBucket();
     return MaterialApp.router(
     
-      title: 'portfolio | Créer vos factures simplement et éfficacement.',
+      title: 'Ryad Dev | My developer Portfolio.',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -46,7 +46,7 @@ class BooksLocation extends BeamLocation<BeamState> {
     final pages = [
       const BeamPage(
         key: ValueKey('home'),
-        title: 'portfolio | Créer vos factures simplement et éfficacement.',
+        title: 'Ryad Dev | My developer Portfolio.',
         child: LandingPage(),
       ),
       if (state.uri.pathSegments.contains('blog'))
